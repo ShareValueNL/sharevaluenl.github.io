@@ -5,10 +5,8 @@
     <title>ShareValue</title>
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
+      // Redirect to index.html with path encoded in query string
       var pathSegmentsToKeep = 0;
-
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
@@ -17,18 +15,6 @@
         (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash
       );
-    </script>
-    <script type="text/javascript">
-      // Fix the URL immediately after redirect
-      (function() {
-        var search = window.location.search;
-        if (search && search.indexOf('/?') === 0) {
-          var path = search.slice(1); // Remove the leading ?
-          var hash = window.location.hash || '';
-          var cleanPath = path + hash;
-          window.history.replaceState(null, '', cleanPath);
-        }
-      })();
     </script>
   </head>
   <body>
