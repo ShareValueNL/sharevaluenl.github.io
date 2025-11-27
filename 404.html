@@ -1,29 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { font-family: sans-serif; text-align: center; padding: 2rem; }
-    h1 { font-size: 3rem; margin-bottom: 1rem; }
-    p { font-size: 1.25rem; color: #666; }
-  </style>
-</head>
-<body>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting...</title>
   <script>
-    // Only run on unknown routes
+    // Only redirect for non-root paths
     if (location.pathname !== '/' && location.pathname !== '/404.html') {
-      // Convert old path to hash-based path
-      const hashUrl = '#' + location.pathname;
-      // Load SPA index.html and replace content
-      fetch('/index.html').then(r => r.text()).then(html => {
-        document.open();
-        document.write(html);
-        document.close();
-        // Push the original path into the hash
-        history.replaceState({}, '', hashUrl + location.search + location.hash);
-      }).catch(console.error);
+      const newUrl = location.origin + '/#' + location.pathname + location.search + location.hash;
+      window.location.replace(newUrl);
     }
   </script>
+</head>
+<body>
+  <p>Redirecting...</p>
 </body>
 </html>
