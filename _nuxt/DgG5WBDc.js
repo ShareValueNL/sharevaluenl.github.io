@@ -1,1 +1,0 @@
-import{W as o,s as n}from"./DQBL4aL1.js";function i(e,a={}){const{waitForData:u=!1,showErrorPage:r=!0,redirectTo:t=void 0,retryCount:s=0}=a;if(s>0)return!1;if(!e||!e.length){if(r){if(t)return o(t),!1;throw n({statusCode:404,statusMessage:"deze pagina kan niet worden gevonden.",fatal:!0})}else if(!r)return!1;return!1}return!0}export{i as u};
