@@ -3,16 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Redirecting...</title>
+  <title>Pagina niet gevonden - ShareValue</title>
   <script>
-    // Only redirect for non-root paths
-    if (location.pathname !== '/' && location.pathname !== '/404.html') {
-      const newUrl = location.origin + '/#' + location.pathname + location.search + location.hash;
-      window.location.replace(newUrl);
+    // Handle legacy hash-based URLs (e.g., /#/about -> /about)
+    // This helps users with old bookmarks or cached links transition to the new routing
+    if (location.hash && location.hash.startsWith('#/')) {
+      const path = location.hash.slice(1); // Remove '#' to get the path
+      window.location.replace(location.origin + path);
     }
   </script>
 </head>
 <body>
-  <p>Redirecting...</p>
+  <h1>Pagina niet gevonden</h1>
+  <p>De pagina die u zoekt bestaat niet. U wordt automatisch doorgestuurd...</p>
+  <script>
+    // Fallback: redirect to home after 3 seconds if no hash redirect occurred
+    if (!location.hash.startsWith('#/')) {
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 3000);
+    }
+  </script>
 </body>
 </html>
