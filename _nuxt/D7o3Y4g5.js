@@ -1,0 +1,1 @@
+import{e as o,o as n,f as t,ap as r,aq as s}from"./BBcnv2LW.js";const a={xmlns:"http://www.w3.org/2000/svg",fill:"none",stroke:"currentColor",viewBox:"0 0 24 24"};function l(c,e){return n(),o("svg",a,[...e[0]||(e[0]=[t("path",{d:"M6 18 18 6M6 6l12 12"},null,-1)])])}const p={render(){return r(s,{icon:{render:l},name:"close"})}};export{p as default,l as render};
