@@ -1,0 +1,10 @@
+# robots.txt for sharevalue.nl
+
+User-agent: *
+Allow: /
+
+# Exclude pagination from crawling (canonical pages are preferred)
+Disallow: /*/page/
+
+# Sitemap location
+Sitemap: https://www.sharevalue.nl/sitemap.xml
