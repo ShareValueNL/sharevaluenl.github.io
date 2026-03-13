@@ -6,5 +6,10 @@ Allow: /
 # Exclude pagination from crawling (canonical pages are preferred)
 Disallow: /*/page/
 
+# Weird crawl bots causing google indexes
+Disallow: /*~/
+Disallow: /*?URL=
+Disallow: /*?url=
+
 # Sitemap location
 Sitemap: https://www.sharevalue.nl/sitemap.xml
