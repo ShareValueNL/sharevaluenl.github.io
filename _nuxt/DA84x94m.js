@@ -1,0 +1,1 @@
+import{c as e,i as t}from"./COMZqo5U.js";function n(n,r={}){let{waitForData:i=!1,showErrorPage:a=!0,redirectTo:o=void 0,retryCount:s=0}=r;if(s>0)return!1;if(!n||!n.length){if(a){if(o)return e(o),!1;throw t({statusCode:404,statusMessage:`deze pagina kan niet worden gevonden.`,fatal:!0})}return!1}return!0}export{n as t};

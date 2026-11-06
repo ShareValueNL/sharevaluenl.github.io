@@ -1,0 +1,1 @@
+import{c as e}from"./COMZqo5U.js";import{F as t,f as n,y as r}from"./aqzM9I0f.js";import{t as i}from"./BxaQIaLf.js";var a=r({__name:`index`,setup(r){return i({middleware:[function(){return e(`/kennisbank/all/`,{redirectCode:301})}]}),(e,r)=>(t(),n(`div`,null,`Redirecting...`))}});export{a as default};
